@@ -1,0 +1,40 @@
+{
+  "name": "next-ts-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "ts": "tsc --noEmit --incremental false",
+    "pre-commit": "next lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/client": "latest",
+    "clsx": "latest",
+    "graphql": "latest",
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-string-replace": "latest"
+  },
+  "devDependencies": {
+    "@babel/node": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "babel-plugin-styled-components": "latest",
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.2",
+    "husky": "latest",
+    "prettier": "latest",
+    "pretty-quick": "latest",
+    "sass": "latest",
+    "typescript": "latest"
+  }
+}

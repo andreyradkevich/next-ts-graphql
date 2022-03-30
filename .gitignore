@@ -1,0 +1,6 @@
+node_modules/
+.next/
+.husky/
+.env.local
+tsconfig.tsbuildinfo
+pages.json

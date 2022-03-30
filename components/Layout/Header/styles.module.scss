@@ -1,0 +1,22 @@
+@use 'styles/variables' as variables;
+
+.root {
+  border-bottom: solid 1px variables.$primary-colors-light;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  background-color: variables.$primary-colors-white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 40px;
+  border-right: 1px solid variables.$primary-colors-light;
+  padding-right: 64px;
+  cursor: pointer;
+}
