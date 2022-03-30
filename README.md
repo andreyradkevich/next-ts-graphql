@@ -1,5 +1,7 @@
+Install all needed packages
+
 ```
-make install - will install all needed dependencies
+make install
 ```
 
 Configure husky:
