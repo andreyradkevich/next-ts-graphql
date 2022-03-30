@@ -13,13 +13,12 @@ npm set-script pre-commit "next lint"
 npx husky add .husky/pre-commit "npm run ts && npm run pre-commit"
 ```
 
-.env.local.example rename to .env.local and ask me to provide you will variables
+`.env.local.example` rename to `.env.local` and ask me to provide you will variables
 needed
 
 To run project you need execute in terminal:
 
 ```
-make install
 npm run dev
 ```
 
