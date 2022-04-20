@@ -1,17 +1,13 @@
 import { gql } from '@apollo/client';
 
 export const POSTS_QUERY = gql`
-  query MyQuery {
+  query NewQuery {
     posts {
       edges {
         node {
-          title
-          seo {
-            title
-            twitterTitle
-            twitterDescription
-          }
           uri
+          title
+          status
           content
         }
       }

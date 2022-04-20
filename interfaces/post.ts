@@ -7,3 +7,9 @@ export interface Post {
   [Keys.seo]: Seo;
   [Keys.content]: string;
 }
+
+export interface PostEdgesNodeReponse {
+  posts: {
+    edges: { node: Post }[];
+  };
+}

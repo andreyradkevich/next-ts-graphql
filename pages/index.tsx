@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useIntl } from 'react-intl';
+import { ApolloQueryResult } from '@apollo/client';
 
 import { POSTS_QUERY } from 'queries/posts';
 
@@ -7,7 +8,10 @@ import { apolloClient } from 'api/client';
 
 import { handlePostsResponse } from 'response/handlers/posts';
 
-import { Post as PostI } from 'interfaces/post';
+import {
+  Post as PostI,
+  PostEdgesNodeReponse as PostEdgesNodeReponseI,
+} from 'interfaces/post';
 
 import Page from 'components/Page/Root';
 import Posts from 'components/Pages/Home/Posts';
@@ -15,13 +19,14 @@ import ClientOnly from 'components/ClientOnly';
 import ClientPosts from 'components/Pages/Home/ClientPosts';
 
 export async function getStaticProps() {
-  const { data } = await apolloClient.query({
-    query: POSTS_QUERY,
-  });
-
+  const response: ApolloQueryResult<PostEdgesNodeReponseI> =
+    await apolloClient.query({
+      query: POSTS_QUERY,
+    });
+  console.log(response.data, 'sda');
   return {
     props: {
-      posts: handlePostsResponse(data),
+      posts: handlePostsResponse(response.data),
     },
   };
 }
